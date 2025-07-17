@@ -1,0 +1,381 @@
+*{
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+}
+.navabar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+.subnava{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.subnava a{
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: larger;
+    position: relative;
+    display:inline;
+    color: blue;
+    transition: color 0.2s ease;
+}
+.subnava a::before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: blueviolet;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+.subnava a:hover{
+    color: orangered;
+}
+.subnava a:hover::before{
+    transform: scaleX(1);
+}
+.check{
+    display: none;
+}
+#demo{
+    display: none;
+}
+.container1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.content1{
+    width: 400px;
+    height: 400px;
+}
+.content1 p{
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 15px;
+    line-height: 35px;
+}
+.content1 p:hover{
+    color: orangered;
+}
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+input[name="carousel"] {
+    display: none;
+}
+
+.navigation {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.navigation label {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+#slide1:checked ~ .carousel-container .slides {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .carousel-container .slides {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carousel-container .slides {
+    transform: translateX(-200%);
+}
+
+#slide1:checked ~ .navigation label[for="slide1"],
+#slide2:checked ~ .navigation label[for="slide2"],
+#slide3:checked ~ .navigation label[for="slide3"] {
+    background: #333;
+}
+.content3{
+    width: 600px;
+    height: 400px;
+}
+.content3 h1{
+    margin-top: 15px;
+}
+.content3 p{
+    font-size: larger;
+    margin-top: 15px;
+    line-height: 30px;
+}
+
+.but2{
+    width: 130px;
+    height: 40px;
+    background-color: white;
+    color: orangered;
+    border: 1px solid orangered;
+    border-radius: 40px;
+    font-size: large;
+    margin-top: 15px;
+}
+.content{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.flip{
+    width: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.text1{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cardcontainer{
+    width: 300px;
+    height: 250px;
+    display: flex;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.front, .back{
+    width: 300px;
+    height: 250px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    backface-visibility: hidden;
+    padding: 20px;
+    box-shadow: 2px 5px 8px black;
+    animation:  item 5s linear infinite;
+}
+.front{
+    line-height: 25px;
+    color: orangered;
+    font-size: large;
+    transform: rotateY(0deg);
+}
+.back{
+    line-height: 30px;
+    background-color: orangered;
+    color: white;
+    font-size: large;
+    transform: rotateY(180deg);
+}
+.cardcontainer:hover{
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+h1{
+    text-align: center;
+}
+
+.form{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.ani img{
+    margin-top: 25px;
+    animation: trun 3s linear infinite;
+}
+@keyframes trun{
+    0%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}
+.quick{
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 1px 3px 5px;
+    padding: 20px;
+    text-align: center;
+}
+.quick h3{
+    color: orangered;
+}
+.quick h3:hover{
+    color: white;
+}
+.quick input{
+    width: 250px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+.but1{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: orangered;
+    color: white;
+    transition: transform 0.3s ease;
+}
+.but1:hover{
+    transform: scale(1.1);
+}
+.end{
+    width: 100%;
+    height: 400px;
+    background-color: black;
+}
+.end1{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.iconend{
+    text-align: center;
+}
+.iconend h1{
+    color: white;
+}
+.iconend i{
+    margin-top: 20px;
+    margin-left: 20px;
+    color: white;
+}
+.foot{
+    font-size: large;
+    color: white;
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 528px){
+     .subnava{
+        width: 100%;
+        height: 0px;
+        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        transition: left .3s ease-in-out;
+        overflow: hidden;
+        text-align: center;
+        z-index: 99;
+    }
+    .navabar a{
+        margin-top: 20px;
+    }
+    #demo:checked ~ .check #menu{
+        display: none;
+    }
+    #demo:checked ~ .check #close{
+        display: block;
+    }
+    #demo:checked ~ .subnava{
+        height: 200px;
+    }
+    .check{
+        display: block;
+    }
+    .check #close{
+        display: none;
+    }
+    .container1{
+        flex-direction: column;
+    }
+    .content1{
+        text-align: center;
+    }
+    .flip{
+        height: 1650px;
+        display: flex;
+        flex-direction: column;
+    }
+    .form{
+        height: 1150px;
+        flex-direction: column;
+    }
+    .content3{
+        width: 400px;
+        text-align: center;
+        height: auto;
+    }
+    .end{
+        width: 100%;
+        height: 400px;
+        background-color: black;
+    }
+    .end1{
+        width: 100%;
+        height: 350px;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 15px;
+    }
+    .iconend{
+        text-align: center;
+    }
+    .iconend h1{
+        font-size: 15px;
+    }
+    .foot{
+        font-size: small;
+    }
+    .map{
+        width: 150px;
+        height: 150px;
+    }
+    
+}
